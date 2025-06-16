@@ -2,8 +2,8 @@
 Contributors: mjplugins2
 Tags: business reviews, reviews, testimonials, ratings, trustpilot
 Requires at least: 6.0
-Tested up to: 6.6
-Stable tag: 0.0.8
+Tested up to: 6.8.1
+Stable tag: 0.0.9
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,8 @@ Post Limit (PRO): **[brtpmj_reviews limit="8"]**
 
 Minimum Stars (PRO): **[brtpmj_reviews min_stars="4"]**
 
+Compact Widget (PRO): **[brtpmj_compact_widget]**
+
 By default the plugin displays only 3 recent reviews per shortcode. You can display 20 reviews with the PRO version. [Click here to get the PRO version.](https://trustpilotplugin.com/pricing/)
 
 Note: You will need to manually sync the reviews from settings to get the latest reviews from a profile.
@@ -55,12 +57,14 @@ Please leave your valuable review here - [https://wordpress.org/support/plugin/b
 
 * Get 20 reviews instead of 3.
 * Supports list, grid, and carousel layouts.
+* Supports newly built Compact widget layout.
 * Shortcode support for reviews count limit and minimum stars.
 * Option to customize the output like hide logo, name, review count or add-review link.
 * Option to set review count limit.
 * Option to change the layout from settings.
 * Option to filter the reviews based on star count.
 * Option to set description words limit.
+* Option to hide Review Stars.
 
 ### External Service Usage
 
@@ -106,6 +110,11 @@ Use Shortcode [brtpmj_reviews] to display the reviews from the profile you set i
 4. Carousel Layout
 
 == Changelog ==
+
+= 0.0.9 =
+* 2025-06-16
+* Fixed issue causing conflicts with PRO version.
+* Added new options and shortcode to the settings page.
 
 = 0.0.8 =
 * 2024-10-11

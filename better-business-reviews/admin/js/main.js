@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
 		});
 	}
 	
-	$('#brtpmj_settings form').on('submit', function(e){
+	$('#brtpmj_settings form#brtpmj_admin_setting_frm_free').on('submit', function(e){
 		e.stopPropagation();
 		e.preventDefault();
 		fetch_reviews();

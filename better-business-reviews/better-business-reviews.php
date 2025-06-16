@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Better Business Reviews - Trustpilot WordPress Plugin.
 * Description: Display your business reviews from a Trustpilot profile.
-* Version: 0.0.8
+* Version: 0.0.9
 * Author: Media Jedi
 * Author URI: https://mediajedi.com/plugins/
 * License: GPLv2 or later
@@ -20,7 +20,7 @@ if (!function_exists('brtpmj_init_plugin')) {
 	function brtpmj_init_plugin(){
 		
 		define ( 'BRTPMJ_PLUGIN_DIR', plugin_dir_path(__FILE__ ) );
-		define ( 'BRTPMJ_PLUGIN_VER', '0.0.8' );
+		define ( 'BRTPMJ_PLUGIN_VER', '0.0.9' );
 		
 		global $brtpmj_plugin_url, $brtpmj_api_url;
 		$brtpmj_plugin_url = plugin_dir_url( __FILE__ );

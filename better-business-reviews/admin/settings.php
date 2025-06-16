@@ -83,6 +83,14 @@ if (!function_exists('brtpmj_config_callback')) {
 						<span class="brtpmj_shortcode">[brtpmj_reviews min_stars="4"]</span>
 					</div>								
 				</div>
+				<div class="brtpmj_inner-container">
+					<div class="brtpmj_col-1">
+						<label>Compact Widget (PRO)</label>	
+					</div>
+					<div class="brtpmj_col-2">
+						<span class="brtpmj_shortcode">[brtpmj_compact_widget]</span>
+					</div>								
+				</div>
 			</div>
 
 			<div class="brtpmj_setting-container">
@@ -90,6 +98,20 @@ if (!function_exists('brtpmj_config_callback')) {
 
 				<form>
 
+					<div class="brtpmj_inner-container">
+						<div class="brtpmj_col-1">
+							<label>Enable Floating Widget</label>
+						</div>
+
+						<div class="brtpmj_col-2">
+							<input type="checkbox">	
+							<select>
+								<option value="">Left</option>
+								<option value="">Right</option>
+							</select>
+						</div>
+					</div>
+					
 					<div class="brtpmj_inner-container">
 						<div class="brtpmj_col-1">
 							<label>Hide Logo</label>
@@ -113,6 +135,16 @@ if (!function_exists('brtpmj_config_callback')) {
 					<div class="brtpmj_inner-container">
 						<div class="brtpmj_col-1">
 							<label>Hide Review Count</label>
+						</div>
+
+						<div class="brtpmj_col-2">
+							<input type="checkbox">	
+						</div>
+					</div>
+					
+					<div class="brtpmj_inner-container">
+						<div class="brtpmj_col-1">
+							<label>Hide Review Stars</label>
 						</div>
 
 						<div class="brtpmj_col-2">
