@@ -17,7 +17,7 @@ if (!function_exists('brtpmj_config_callback')) {
 		<!-- Pages HTMl -->
 		<div class="wrap">
 			<div id="brtpmj_settings">
-				<form method='POST' action="">
+				<form method='POST' action="" id="brtpmj_admin_setting_frm_free">
 					<?php 
 					wp_nonce_field('brtpmj_settings_option');
 					?>
