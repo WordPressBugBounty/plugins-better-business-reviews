@@ -12,7 +12,7 @@ Better Business Reviews allows you to display your business reviews from a Trust
 
 == Description ==
 
-Best Trustpilot WordPress plugin that allows you to display reviews from Trustpilot to your WordPress website. No need to enter any API key to load the reviews.
+The #1 Trustpilot WordPress plugin that allows you to display reviews from Trustpilot to your WordPress website. No need to enter any API key to load the reviews.
 
 You just need the URL of a Trustpilot business profile and the plugin does the rest for you. The plugin will fetch the reviews from Trustpilot profile and store in the database on your website.
 
