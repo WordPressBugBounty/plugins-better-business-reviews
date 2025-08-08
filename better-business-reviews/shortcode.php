@@ -82,7 +82,7 @@ if (!function_exists('brtpmj_reviews_callback')) {
 						</div>
 						
 						<div class="brtpmj_sr_rating">
-							<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . '/assets/stars-' . $rating . '.svg"></span>
+							<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $rating . '.svg"></span>
 						</div>
 						
 						<div class="brtpmj_sr_title">
@@ -105,7 +105,7 @@ if (!function_exists('brtpmj_reviews_callback')) {
 			
 			$html .= '<p class="brtpmj_business_ratings">
 						<span class="brtpmj_br_score">' . $brtpmj_bu_score . '</span>
-						<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . '/assets/stars-' . $brtpmj_bu_stars . '.svg"></span>
+						<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $brtpmj_bu_stars . '.svg"></span>
 						<span class="brtpmj_br_count">' . $brtpmj_bu_numberofreviews . ' Reviews</span>
 					</p>';
 					

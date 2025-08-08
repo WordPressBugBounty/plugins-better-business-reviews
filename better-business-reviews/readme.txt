@@ -2,8 +2,8 @@
 Contributors: mjplugins2
 Tags: business reviews, reviews, testimonials, ratings, trustpilot
 Requires at least: 6.0
-Tested up to: 6.8.1
-Stable tag: 0.1.0
+Tested up to: 6.8
+Stable tag: 0.1.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Better Business Reviews allows you to display your business reviews from a Trust
 
 == Description ==
 
-The #1 Trustpilot WordPress plugin that allows you to display reviews from Trustpilot to your WordPress website. No need to enter any API key to load the reviews.
+Best Trustpilot WordPress plugin that allows you to display reviews from Trustpilot to your WordPress website. No need to enter any API key to load the reviews.
 
 You just need the URL of a Trustpilot business profile and the plugin does the rest for you. The plugin will fetch the reviews from Trustpilot profile and store in the database on your website.
 
@@ -113,6 +113,10 @@ Use Shortcode [brtpmj_reviews] to display the reviews from the profile you set i
 4. Carousel Layout
 
 == Changelog ==
+
+= 0.1.1 =
+* 2025-08-08
+* Fixed assets URL include double slashes.
 
 = 0.1.0 =
 * 2025-06-24
