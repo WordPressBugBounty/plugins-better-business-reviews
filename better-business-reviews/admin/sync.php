@@ -13,7 +13,7 @@ add_action( 'wp_ajax_brtpmj_fetch_reviews', 'brtpmj_fetch_reviews' );
 if (!function_exists('brtpmj_fetch_reviews')) {
 	function brtpmj_fetch_reviews(){
 		$brtpmj_res_array = array();
-		if ( !isset( $_POST['brtpmj_admin_nonce'] ) || !wp_verify_nonce( sanitize_text_field( wp_unslash ( $_POST['brtpmj_admin_nonce'] ) ), 'brtpmj_ajax_nonce' ) ) {
+		if ( !current_user_can( 'manage_options' ) || !isset( $_POST['brtpmj_admin_nonce'] ) || !wp_verify_nonce( sanitize_text_field( wp_unslash ( $_POST['brtpmj_admin_nonce'] ) ), 'brtpmj_ajax_nonce' ) ) {
 			header( 'HTTP/1.1 400 Empty POST Values' );
 			$brtpmj_res_array['error'] = __('Error - Could not verify POST values', 'better-business-reviews');
 			echo wp_json_encode($brtpmj_res_array);
