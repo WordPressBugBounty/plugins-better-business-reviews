@@ -82,7 +82,7 @@ if (!function_exists('brtpmj_reviews_callback')) {
 						</div>
 						
 						<div class="brtpmj_sr_rating">
-							<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $rating . '.svg"></span>
+							<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $rating . '.svg" alt="' . esc_attr($rating) . ' stars"></span>
 						</div>
 						
 						<div class="brtpmj_sr_title">
@@ -99,13 +99,13 @@ if (!function_exists('brtpmj_reviews_callback')) {
 			
 			// Append to html
 			$html .= '<div class="brtpmj_businessheader">
-						<img src="'.$brtpmj_bu_profileimageurl.'">
+						<img src="'.$brtpmj_bu_profileimageurl.'" alt="' . esc_attr($brtpmj_bu_displayname) . '">
 						<h2 class="brtpmj_business_name">' . $brtpmj_bu_displayname . '</h2>
 					</div>';
 			
 			$html .= '<p class="brtpmj_business_ratings">
 						<span class="brtpmj_br_score">' . $brtpmj_bu_score . '</span>
-						<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $brtpmj_bu_stars . '.svg"></span>
+						<span class="brtpmj_br_score_img"><img src="' . $brtpmj_plugin_url . 'assets/stars-' . $brtpmj_bu_stars . '.svg" alt="' . esc_attr($brtpmj_bu_stars) . ' stars"></span>
 						<span class="brtpmj_br_count">' . $brtpmj_bu_numberofreviews . ' Reviews</span>
 					</p>';
 					

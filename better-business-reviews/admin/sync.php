@@ -112,7 +112,7 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 										$initials_img = '<span>' . implode( $matches[0] ) . '</span>';
 									}
 									else{
-										$initials_img = '<img src="' . $cimage . '">';
+										$initials_img = '<img src="' . $cimage . '" alt="' . esc_attr($cName) . '">';
 									}
 									
 									$post_args = array(

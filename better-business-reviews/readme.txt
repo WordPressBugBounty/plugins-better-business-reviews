@@ -3,7 +3,7 @@ Contributors: mjplugins2
 Tags: business reviews, reviews, testimonials, ratings, trustpilot
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,6 +113,10 @@ Use Shortcode [brtpmj_reviews] to display the reviews from the profile you set i
 4. Carousel Layout
 
 == Changelog ==
+
+= 0.1.3 =
+* 2026-02-14
+* Update - Added ALT tags to images.
 
 = 0.1.2 =
 * 2025-12-23
