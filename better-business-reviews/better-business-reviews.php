@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Better Business Reviews - Trustpilot WordPress Plugin.
 * Description: Display your business reviews from a Trustpilot profile.
-* Version: 0.1.3
+* Version: 0.1.4
 * Author: Better Business Reviews
 * Author URI: https://trustpilotplugin.com/
 * License: GPLv2 or later
@@ -20,13 +20,11 @@ if (!function_exists('brtpmj_init_plugin')) {
 	function brtpmj_init_plugin(){
 		
 		define ( 'BRTPMJ_PLUGIN_DIR', plugin_dir_path(__FILE__ ) );
-		define ( 'BRTPMJ_PLUGIN_VER', '0.1.3' );
+		define ( 'BRTPMJ_PLUGIN_VER', '0.1.4' );
 		
-		global $brtpmj_plugin_url, $brtpmj_api_url;
+		global $brtpmj_plugin_url;
 		$brtpmj_plugin_url = plugin_dir_url( __FILE__ );
-		
-		$brtpmj_api_url = 'https://us-central1-graphical-mile-422009-k1.cloudfunctions.net/function-2';
-		
+
 		add_action( 'wp_enqueue_scripts', 'brtpmj_styles_scripts' );
 		add_action( 'admin_enqueue_scripts', 'brtpmj_admin_script' );
 

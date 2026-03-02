@@ -33,30 +33,31 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 				// commented below because we need to send full url as it may be from other language. e.g. https://br.trustpilot.com/review/etc.com and we would need to fetch from that.
 				// $brtpmj_url = basename($brtpmj_url);
 				
-				$args = array(
-					"method"			=> "GET",
-					"timeout"			=> 20,
-					"Referrer Policy"	=> "origin-when-cross-origin",
-					"headers" => array(
-						"Content-Type" 		=> "application/x-www-form-urlencoded",
-						"Sec-Fetch-Site"	=> "same-origin"
-					)
-				);
-				
-				global $brtpmj_api_url;
-				$brtpmj_server_url = $brtpmj_api_url . "?domain=" . $brtpmj_url;
-				
-				$response = wp_remote_get( $brtpmj_server_url, $args );
-				
+				$response = wp_remote_get( $brtpmj_url );
+
 				if(!is_wp_error($response)){
-				
-					if(isset($response['body'])){
-						
-						$data = json_decode($response['body']);
-						
-						if(isset($data->pageProps)){
-						
-							$pageProps = $data->pageProps;
+
+					$tp_html = wp_remote_retrieve_body($response);
+
+					if(!empty($tp_html)){
+
+						$tp_html = mb_convert_encoding($tp_html, 'HTML-ENTITIES', 'UTF-8');
+						libxml_use_internal_errors(true);
+						$doc = new DOMDocument();
+						@$doc->loadHTML($tp_html);
+						$xpath = new DOMXPath($doc);
+
+						$script_data_obj = $xpath->query("//script[@id='__NEXT_DATA__']");
+						$emptyObject = new stdClass();
+						$script_data = $emptyObject;
+						if($script_data_obj->length){
+							$script_data_str = $script_data_obj->item(0)->nodeValue;
+							$script_data = json_decode($script_data_str);
+						}
+
+						if(isset($script_data->props->pageProps)){
+
+							$pageProps = $script_data->props->pageProps;
 							
 							// busines unit
 							$unit				= $pageProps->businessUnit;
@@ -77,8 +78,9 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 							
 							// Reviews - insert custom posts
 							$reviews = $pageProps->reviews;
-							
+
 							if(is_array($reviews)){
+								$reviews = array_slice($reviews, 0, 3);
 								
 								$reversed_array_reviews = array_reverse($reviews);
 								

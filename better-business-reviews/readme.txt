@@ -3,7 +3,7 @@ Contributors: mjplugins2
 Tags: business reviews, reviews, testimonials, ratings, trustpilot
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -34,13 +34,11 @@ Minimum Stars (PRO): **[brtpmj_reviews min_stars="4"]**
 
 Compact Widget (PRO): **[brtpmj_compact_widget]**
 
-By default the plugin displays only 3 recent reviews per shortcode. You can display 20 reviews with the PRO version. [Click here to get the PRO version.](https://trustpilotplugin.com/pricing/)
+By default the plugin displays only 3 recent reviews per shortcode. You can display all your trustpilot reviews with the PRO version. [Click here to get the PRO version.](https://trustpilotplugin.com/pricing/)
 
-Note: You will need to manually sync the reviews from settings to get the latest reviews from a profile. The PRO version displays the latest reviews - No need to manually sych the reviews with the PRO version. 
+Note: You will need to manually sync the reviews from settings to get the latest reviews from a profile. The PRO version displays the latest reviews automatically - No need to manually sych the reviews with the PRO version. 
 
 Trustpilot WordPress plugin provides an integration between Trustpilot and WordPress. If you have any feature requests, please create a support ticket.
-
-Please leave your valuable review here - [https://wordpress.org/support/plugin/better-business-reviews/reviews/](https://wordpress.org/support/plugin/better-business-reviews/reviews/)
 
 **Disclaimer:** This is an unofficial plugin and is not linked in any way to the official Trust Pilot platform. This plugin just fetches the publicly available content.
 
@@ -55,7 +53,7 @@ Please leave your valuable review here - [https://wordpress.org/support/plugin/b
 
 [PRO version Features](https://trustpilotplugin.com/)
 
-* Get 20 reviews instead of 3.
+* Get all reviews instead of 3.
 * Display latest reviews all the time - No need to manually fetch/sync the reviews.
 * Supports list, grid, and carousel layouts.
 * Supports newly built Compact widget layout.
@@ -68,16 +66,6 @@ Please leave your valuable review here - [https://wordpress.org/support/plugin/b
 * Option to filter the reviews based on star count.
 * Option to set description words limit.
 * Option to hide Review Stars.
-
-### External Service Usage
-
-Better Business Reviews plugin makes usage of a third party service "Google Cloud Functions" to fetch the necessary data. Once fetched, it stores the data in your site's database. It will only call the service when you click the Sync button from the plugin's settings page in WordPress admin panel. Please review the links to external service below:
-
-- [Google Cloud Functions](https://cloud.google.com/functions/docs/concepts/overview)
-- [Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice)
-- [Terms](https://cloud.google.com/terms)
-
-Please ensure that you read and understand the terms of use and privacy policy of the external service. By using this plugin, you agree to comply with the terms set by the external service provider.
 
 == Installation ==
 
@@ -113,6 +101,10 @@ Use Shortcode [brtpmj_reviews] to display the reviews from the profile you set i
 4. Carousel Layout
 
 == Changelog ==
+
+= 0.1.4 =
+* 2026-03-02
+* Update - Removed google cloud function calls and used modern fetch method.
 
 = 0.1.3 =
 * 2026-02-14
