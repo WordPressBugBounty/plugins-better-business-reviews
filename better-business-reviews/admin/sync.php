@@ -33,7 +33,27 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 				// commented below because we need to send full url as it may be from other language. e.g. https://br.trustpilot.com/review/etc.com and we would need to fetch from that.
 				// $brtpmj_url = basename($brtpmj_url);
 				
-				$response = wp_remote_get( $brtpmj_url );
+				// $response = wp_remote_get( $brtpmj_url );
+				
+				$args = [
+					'timeout'     => 20,
+					'redirection' => 5,
+					'httpversion' => '1.1',
+					'blocking'    => true,
+					'headers' => [
+						'User-Agent'      => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+						'Accept'          => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+						'Accept-Language' => 'en-US,en;q=0.9',
+						'Accept-Encoding' => 'gzip, deflate, br',
+						'Connection'      => 'keep-alive',
+						'Upgrade-Insecure-Requests' => '1',
+						'Cache-Control'   => 'no-cache',
+						'Pragma'          => 'no-cache',
+						'Referer'         => 'https://www.google.com/',
+					]
+				];
+
+				$response = wp_remote_get($brtpmj_url, $args);
 
 				if(!is_wp_error($response)){
 
