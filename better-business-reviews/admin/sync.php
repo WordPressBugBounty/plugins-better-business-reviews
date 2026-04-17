@@ -53,7 +53,13 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 					]
 				];
 
-				$response = wp_remote_get($brtpmj_url, $args);
+				// $response = wp_remote_get($brtpmj_url, $args);
+				
+				$api_url = add_query_arg([
+					'target_url'  => $brtpmj_url,
+				], 'http://trustpilotplugin.com:3090/');
+
+				$response = wp_remote_get($api_url, $args);
 
 				if(!is_wp_error($response)){
 
