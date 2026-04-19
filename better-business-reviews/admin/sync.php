@@ -57,7 +57,7 @@ if (!function_exists('brtpmj_fetch_reviews')) {
 				
 				$api_url = add_query_arg([
 					'target_url'  => $brtpmj_url,
-				], 'http://trustpilotplugin.com:3090/');
+				], 'https://api.trustpilotplugin.com/');
 
 				$response = wp_remote_get($api_url, $args);
 
