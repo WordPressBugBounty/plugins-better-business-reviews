@@ -1,10 +1,10 @@
 <?php
 /**
-* Plugin Name: Better Business Reviews - Trustpilot WordPress Plugin.
-* Description: Display your business reviews from a Trustpilot profile.
-* Version: 0.1.7
+* Plugin Name: Better Business Reviews.
+* Description: Display your business reviews.
+* Version: 1.0.0
 * Author: Better Business Reviews
-* Author URI: https://trustpilotplugin.com/
+* Author URI: #
 * License: GPLv2 or later
 * Text Domain: better-business-reviews
 * Domain Path: /languages
@@ -20,52 +20,17 @@ if (!function_exists('brtpmj_init_plugin')) {
 	function brtpmj_init_plugin(){
 		
 		define ( 'BRTPMJ_PLUGIN_DIR', plugin_dir_path(__FILE__ ) );
-		define ( 'BRTPMJ_PLUGIN_VER', '0.1.7' );
+		define ( 'BRTPMJ_PLUGIN_VER', '1.0.0' );
 		
 		global $brtpmj_plugin_url;
 		$brtpmj_plugin_url = plugin_dir_url( __FILE__ );
 
 		add_action( 'wp_enqueue_scripts', 'brtpmj_styles_scripts' );
-		add_action( 'admin_enqueue_scripts', 'brtpmj_admin_script' );
-
+		
 		if( is_admin() ){
 			include(plugin_dir_path(__FILE__ ) . 'admin/settings.php');
-			include(plugin_dir_path(__FILE__ ) . 'admin/sync.php');
 		}
-		include(plugin_dir_path(__FILE__ ) . 'shortcode.php');
-		
-		load_plugin_textdomain( 'better-business-reviews', false, 'better-business-reviews' );
-	}
-}
-
-// Back-end assets
-if (!function_exists('brtpmj_admin_script')) {
-	function brtpmj_admin_script(){
-		wp_enqueue_style(
-			'brtpmj-admin-style',
-			plugin_dir_url( __FILE__ ) . 'admin/css/settings.css',
-			[],
-			BRTPMJ_PLUGIN_VER
-		);
-		
-		wp_enqueue_script(
-			'brtpmj-settings-script',
-			plugins_url('admin/js/main.js',__FILE__ ),
-			array('jquery'),
-			BRTPMJ_PLUGIN_VER,
-			array(
-				'in_footer'  => true,
-			)
-		);
-		
-		wp_localize_script(
-			'brtpmj-settings-script',
-			'ajax_brtpmj_admin_obj',
-			array( 'ajaxurl' 	=> admin_url( 'admin-ajax.php' ), 
-					'nonce'		=> wp_create_nonce('brtpmj_ajax_nonce')
-				 )
-		);
-		
+	
 	}
 }
 
