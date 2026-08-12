@@ -18,20 +18,6 @@ Better Business Reviews allows you to collect and showcase reviews for your busi
 * Display the reviews in List, Grid or Carousel layout.
 * Very easy to use.
 
-[PRO version Features]
-
-* Collect reviews with multiple forms.
-* Display the reviews using custom filters.
-* Supports Compact widget layout.
-* Option to display floating reviews widget.
-* Shortcode support for reviews count limit and minimum stars.
-* Option to display/hide country flags on reviews.
-* Option to set review count limit.
-* Option to change the layout from settings.
-* Option to filter the reviews based on star count.
-* Option to set description words limit.
-* Option to hide Review Stars.
-
 == Installation ==
 
 You can install the Plugin in two ways.
